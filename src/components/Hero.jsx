@@ -16,12 +16,20 @@ export function Hero() {
       Enhance Your OpenAI Playground Experience
       </h1>
       <p className="mx-auto mt-6 max-w-2xl text-lg tracking-tight text-slate-700">
-      Drag, Drop, and Connect your way to powerful AI chatbots and applications using our versatile visual interface.
+      Drag, Drop, and Connect your way to powerful AI chatbots and applications using our free versatile visual interface.
       </p>
       <div className="mt-10 flex justify-center gap-x-6">
       <div className='flex flex-col gap-1'>
-        <Button href="https://app.promptsandbox.io">Start Building Today</Button>
-        <p className='text-xs text-black/60'>No login required</p>
+        <Button
+          href="https://app.promptsandbox.io" 
+          color="blue"
+        aria-label={`Get started`}
+        >
+        <span>
+          Start Building Today
+        </span>
+        </Button>
+        <p className='text-sm text-black/60'>No login required</p>
       </div>
         <Button
           href="https://www.youtube.com/watch?v=CBPw7FXtaEU"

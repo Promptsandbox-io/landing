@@ -5,7 +5,6 @@ import clsx from 'clsx'
 
 import { Container } from '@/components/Container'
 import backgroundImage from '@/images/background-features.jpg'
-import screenshotExpenses from '@/images/screenshots/expenses.png'
 import screenshotGeneral from '@/images/screenshots/general.png'
 import screenshotBlocktypes from '@/images/screenshots/blocktypes.png'
 import screenshotChat from '@/images/screenshots/chat.png'
@@ -57,7 +56,7 @@ export function PrimaryFeatures() {
       className="relative overflow-hidden  pb-28 pt-20 sm:py-32"
     >
       <Image
-        className="absolute opacity-70 grayscale left-1/2 top-1/2 max-w-none translate-x-[-44%] translate-y-[-42%]"
+        className="absolute opacity-70 left-1/2 top-1/2 max-w-none translate-x-[-44%] translate-y-[-42%]"
         src={backgroundImage}
         alt=""
         width={2245}
@@ -70,7 +69,7 @@ export function PrimaryFeatures() {
           Elevate Your AI Workflows without breaking a sweat
           </h2>
           <p className="mt-6 text-lg tracking-tight text-slate-100">
-            It&#39;s like the OpenAI Playground, supercharged
+            It&#39;s like the OpenAI Playground, but supercharged
           </p>
         </div>
         <Tab.Group
