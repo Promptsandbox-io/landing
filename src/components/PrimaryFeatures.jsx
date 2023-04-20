@@ -6,35 +6,30 @@ import clsx from 'clsx'
 import { Container } from '@/components/Container'
 import backgroundImage from '@/images/background-features.jpg'
 import screenshotExpenses from '@/images/screenshots/expenses.png'
-import screenshotPayroll from '@/images/screenshots/payroll.png'
-import screenshotReporting from '@/images/screenshots/reporting.png'
-import screenshotVatReturns from '@/images/screenshots/vat-returns.png'
+import screenshotGeneral from '@/images/screenshots/general.png'
+import screenshotBlocktypes from '@/images/screenshots/blocktypes.png'
+import screenshotChat from '@/images/screenshots/chat.png'
 
 const features = [
   {
-    title: 'Payroll',
+    title: 'Intuitive Visual Interface',
     description:
-      "Keep track of everyone's salaries and whether or not they've been paid. Direct deposit not supported.",
-    image: screenshotPayroll,
+      "Effortlessly create AI workflows with drag-and-drop blocks, suitable for both beginners and experts.",
+    image: screenshotGeneral,
   },
   {
-    title: 'Claim expenses',
+    title: 'Extensive Block Library',
     description:
-      "All of your receipts organized into one place, as long as you don't mind typing in the data by hand.",
-    image: screenshotExpenses,
+      "Utilize a wide array of pre-built blocks for OpenAI APIs, helper functions, and document operations",
+    image: screenshotBlocktypes,
   },
   {
-    title: 'VAT handling',
+    title: 'Real-time Chat Interface',
     description:
-      "We only sell our software to companies who don't deal with VAT at all, so technically we do all the VAT stuff they need.",
-    image: screenshotVatReturns,
+      'Test and iterate your AI applications quickly with a built-in chat interface.',
+    image: screenshotChat,
   },
-  {
-    title: 'Reporting',
-    description:
-      'Easily export your data into an Excel spreadsheet where you can do whatever the hell you want with it.',
-    image: screenshotReporting,
-  },
+
 ]
 
 export function PrimaryFeatures() {
@@ -72,11 +67,10 @@ export function PrimaryFeatures() {
       <Container className="relative">
         <div className="max-w-2xl md:mx-auto md:text-center xl:max-w-none">
           <h2 className="font-display text-3xl tracking-tight text-white sm:text-4xl md:text-5xl">
-            Everything you need to run your books.
+          Elevate Your AI Workflows without breaking a sweat
           </h2>
           <p className="mt-6 text-lg tracking-tight text-blue-100">
-            Well everything you need if you aren’t that picky about minor
-            details like tax compliance.
+            It&#39;s like the OpenAI Playground, supercharged
           </p>
         </div>
         <Tab.Group
