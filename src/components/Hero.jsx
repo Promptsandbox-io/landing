@@ -20,7 +20,7 @@ export function Hero() {
       </p>
       <div className="mt-10 flex justify-center gap-x-6">
       <div className='flex flex-col gap-1'>
-        <Button href="https://promptsandbox.io">Start Building Today</Button>
+        <Button href="https://app.promptsandbox.io">Start Building Today</Button>
         <p className='text-xs text-black/60'>No login required</p>
       </div>
         <Button
