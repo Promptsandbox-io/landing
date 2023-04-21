@@ -42,7 +42,7 @@ const faqs = [
   [
     {
       question: 'Can I share my AI workflows with others?',
-      answer:'Yes, you can share your AI workflows with others by copying the URL of the workflow and sending it to them. They can then open the workflow in their browser and run it. You can also discover and remix workflows created by other users by checking out the gallery.',
+      answer:'Yes, you can share your AI workflows by copying the URL of the workflow and sending it to them. They can then open the workflow in their browser and run it. You can also discover and remix workflows created by other users by checking out the gallery.',
     },
     {
       question: 'How can I provide feedback or report issues?',
