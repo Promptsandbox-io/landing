@@ -104,7 +104,7 @@ export function Header() {
           </div>
           <div className="flex items-center gap-x-5 md:gap-x-8">
           <Button href="https://app.promptsandbox.io" color='blue'>
-            Start Building Today
+            Open Sandbox
           </Button>
 
             <div className="-mr-1 md:hidden">

@@ -26,7 +26,7 @@ export function CallToAction() {
           <p className="mt-4 text-lg tracking-tight text-slate-900">
           Unleash the Full Potential of our supercharged OpenAI Playground
           </p>
-          <Button href="/register" color="blue" className=" mt-5">
+          <Button href="https://app.promptsandbox.io" color="blue" className=" mt-5">
             Start building now
           </Button>
         </div>
