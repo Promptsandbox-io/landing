@@ -80,8 +80,14 @@ export function Faqs() {
             Frequently asked questions
           </h2>
           <p className="mt-4 text-lg tracking-tight text-slate-700">
-            If you can’t find what you’re looking for, email our support team
-            and if you’re lucky someone will get back to you.
+            If you can’t find what you’re looking for, feel free to{' '}
+            {/* email link */}
+            <a href="mailto:egan@hey.com"
+              className="font-medium text-slate-900 hover:text-slate-800"
+            >
+            send me an email.
+            </a>
+            
           </p>
         </div>
         <ul
