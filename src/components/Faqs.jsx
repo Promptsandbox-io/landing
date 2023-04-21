@@ -6,53 +6,52 @@ import backgroundImage from '@/images/background-faqs.jpg'
 const faqs = [
   [
     {
-      question: 'Does TaxPal handle VAT?',
+      question: 'What is Promptsandbox.io?',
       answer:
-        'Well no, but if you move your company offshore you can probably ignore it.',
+        'Promptsandbox.io is an intuitive, web-based platform designed to help you build and refine AI chatbots and applications using a visual interface. With a diverse library of pre-built blocks, seamless OpenAI API integration, and real-time chat interface, it simplifies the AI development process for users of all skill levels.',
     },
     {
-      question: 'Can I pay for my subscription via purchase order?',
-      answer: 'Absolutely, we are happy to take your money in all forms.',
+      question: 'How does Promptsandbox.io work?',
+      answer: 'Users create AI workflows by dragging and dropping blocks onto a canvas and connecting them to form a sequence. Each block has a specific purpose and can be linked with others to send and receive data. You can then run the sequence and can interact with it via our real-time chat interface.',
     },
     {
-      question: 'How do I apply for a job at TaxPal?',
+      question: 'Is Promptsandbox.io free to use?',
       answer:
-        'We only hire our customers, so subscribe for a minimum of 6 months and then let’s talk.',
+        'Yes, Promptsandbox.io is free to use, and you do not need to sign up or install any additional software to start building.',
     },
   ],
   [
     {
-      question: 'What was that testimonial about tax fraud all about?',
+      question: 'Do I need an OpenAI API key to use Promptsandbox.io?',
       answer:
-        'TaxPal is just a software application, ultimately your books are your responsibility.',
+        'Yes.',
     },
     {
       question:
-        'TaxPal sounds horrible but why do I still feel compelled to purchase?',
+        'Can I create custom blocks?',
       answer:
-        'This is the power of excellent visual design. You just can’t resist it, no matter how poorly it actually functions.',
+        'Currently, custom block creation is not supported. However, this feature may be added in the future.',
     },
     {
       question:
-        'I found other companies called TaxPal, are you sure you can use this name?',
+        'Is my data secure?',
       answer:
-        'Honestly not sure at all. We haven’t actually incorporated or anything, we just thought it sounded cool and made this website.',
+        'Your data privacy and security are important to us. We employ industry-standard practices to protect your information and data while using the platform.',
     },
   ],
   [
     {
-      question: 'How do you generate reports?',
-      answer:
-        'You just tell us what data you need a report for, and we get our kids to create beautiful charts for you using only the finest crayons.',
+      question: 'Can I share my AI workflows with others?',
+      answer:'Yes, you can share your AI workflows with others by copying the URL of the workflow and sending it to them. They can then open the workflow in their browser and run it. You can also discover and remix workflows created by other users by checking out the gallery.',
     },
     {
-      question: 'Can we expect more inventory features?',
-      answer: 'In life it’s really better to never expect anything at all.',
+      question: 'How can I provide feedback or report issues?',
+      answer: 'We value user feedback and encourage you to reach out to us with any suggestions, questions, or issues. You can contact us via email at egan@hey.com',
     },
     {
-      question: 'I lost my password, how do I get into my account?',
+      question: 'Is Promptsandbox.io suitable for beginners with little or no programming experience',
       answer:
-        'Send us an email and we will send you a copy of our latest password spreadsheet so you can find your information.',
+        'Absolutely! Our intuitive visual interface is designed to be accessible to users with varying levels of expertise, including those with little or no programming experience.',
     },
   ],
 ]
