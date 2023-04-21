@@ -211,15 +211,15 @@ export function SecondaryFeatures() {
     <section
       id="secondary-features"
       aria-label="Features for simplifying everyday business tasks"
-      className="pb-5 pt-20 sm:pb-20 sm:pt-32 lg:pb-5"
+      className="pb-5 pt-10 sm:pb-20 sm:pt-10 lg:pb-5"
     >
       <Container>
         <div className="mx-auto max-w-2xl md:text-center">
           <h2 className="font-display text-3xl tracking-tight text-slate-900 sm:text-4xl">
-          Immense Potential Without the Hefty Cost
+           Immense Potential Without the Hefty Cost
           </h2>
           <p className="mt-4 text-lg tracking-tight text-slate-700">
-          Many third-party AI apps charge a premium for their services, making it expensive to take advantage of AI in your daily workflows, such as blog writing, research analysis, and more. Promptsandbox.io offers you an alternative by empowering you to create your own AI workflows tailored to your specific needs, without the hefty price tag.
+          Many third-party AI apps charge a premium for their services, making it expensive to take advantage of AI in your daily workflows, such as blog writing, research analysis, and more. Promptsandbox.io offers you an alternative by empowering you to create your own AI workflows tailored to your specific needs easily, without the hefty price tag.
           </p>
         </div>
         {/* <FeaturesMobile />

@@ -24,8 +24,19 @@ module.exports = {
         '4xl': '2rem',
       },
       fontFamily: {
-        sans: ['Inter', ...defaultTheme.fontFamily.sans],
-        display: ['Lexend', ...defaultTheme.fontFamily.sans],
+        // sans: ['Inter', ...defaultTheme.fontFamily.sans],
+        sans: [
+          'ui-rounded',
+          'Hiragino Maru Gothic ProN',
+          'Quicksand',
+          'Comfortaa',
+          'Manjari',
+          'Arial Rounded MT Bold',
+          'Calibri',
+          'source-sans-pro',
+          'sans-serif',
+        ],
+        // display: ['Lexend', ...defaultTheme.fontFamily.sans],
       },
       maxWidth: {
         '2xl': '40rem',
