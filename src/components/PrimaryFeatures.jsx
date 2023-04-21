@@ -87,14 +87,14 @@ export function PrimaryFeatures() {
                       className={clsx(
                         'group relative rounded-full px-4 py-1 lg:rounded-l-xl lg:rounded-r-none lg:p-6',
                         selectedIndex === featureIndex
-                          ? 'bg-white lg:bg-slate-400/10 lg:ring-1 lg:ring-inset lg:ring-slate-500/50'
+                          ? 'bg-blue-200 lg:bg-slate-400/10 lg:ring-1 lg:ring-inset lg:ring-slate-500/50'
                           : 'hover:bg-white/10 lg:hover:bg-white/5'
                       )}
                     >
                       <h3>
                         <Tab
                           className={clsx(
-                            'font-display text-lg [&:not(:focus-visible)]:focus:outline-none',
+                            'font-display text-lg [&:not(:focus-visible)]:focus:outline-none ',
                             selectedIndex === featureIndex
                               ? 'text-slate-600 lg:text-slate-800'
                               : 'text-slate-800 hover:text-900-800 lg:text-slate-800'
