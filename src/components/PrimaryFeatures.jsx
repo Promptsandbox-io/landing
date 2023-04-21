@@ -11,21 +11,21 @@ import screenshotChat from '@/images/screenshots/chat.png'
 
 const features = [
   {
-    title: 'Intuitive Visual Canvas',
+    title: '🎨 Intuitive Visual Canvas',
     description:
-      "Effortlessly create AI workflows with drag-and-drop blocks, suitable for both beginners and experts.",
+      "Easily make AI workflows by connecting and moving around blocks, perfect for new and experienced users.",
     image: screenshotGeneral,
   },
   {
-    title: 'Extensive Block Library',
+    title: '🧱 Extensive Block Library',
     description:
-      "Utilize a wide array of pre-built blocks for OpenAI APIs, helper functions, and document operations",
+      "Use many ready-made blocks for OpenAI tools, helper functions, and working with documents.",
     image: screenshotBlocktypes,
   },
   {
-    title: 'Real-time Chat Interface',
+    title: '💬 Real-time Chat Interface',
     description:
-      'Test and iterate your AI applications quickly with a built-in chat interface.',
+      'Speedily try out and improve your AI apps using an included chat feature.',
     image: screenshotChat,
   },
 
@@ -53,7 +53,7 @@ export function PrimaryFeatures() {
     <section
       id="features"
       aria-label="Features for running your books"
-      className="relative overflow-hidden  pb-10 pt-20 sm:py-32 bg-blue-100"
+      className="relative overflow-hidden  pb-10 pt-20 sm:py-32 bg-gradient-to-b from-blue-100 to-white"
     >
       {/* <Image
         className="absolute opacity-70 left-1/2 top-1/2 max-w-none translate-x-[-44%] translate-y-[-42%]"
@@ -65,7 +65,7 @@ export function PrimaryFeatures() {
       /> */}
       <Container className="relative">
         <div className="max-w-2xl md:mx-auto md:text-center xl:max-w-none">
-          <h2 className="font-display text-3xl tracking-tight text-slate-800 sm:text-4xl md:text-5xl">
+          <h2 className="font-display text-3xl tracking-tight text-black/80 sm:text-4xl md:text-5xl">
           Elevate Your AI Workflows without breaking a sweat
           </h2>
           <p className="mt-6 text-lg tracking-tight text-slate-900">
@@ -88,13 +88,13 @@ export function PrimaryFeatures() {
                         'group relative rounded-full px-4 py-1 lg:rounded-l-xl lg:rounded-r-none lg:p-6',
                         selectedIndex === featureIndex
                           ? 'bg-blue-200 lg:bg-slate-400/10 lg:ring-1 lg:ring-inset lg:ring-slate-500/50'
-                          : 'hover:bg-white/10 lg:hover:bg-white/5'
+                          : 'hover:bg-slate-200/60 lg:hover:bg-slate-200/60'
                       )}
                     >
                       <h3>
                         <Tab
                           className={clsx(
-                            'font-display text-lg [&:not(:focus-visible)]:focus:outline-none ',
+                            'font-display text-lg [&:not(:focus-visible)]:focus:outline-none cursor-pointer',
                             selectedIndex === featureIndex
                               ? 'text-slate-600 lg:text-slate-800'
                               : 'text-slate-800 hover:text-900-800 lg:text-slate-800'

@@ -8,7 +8,7 @@ export function CallToAction() {
   return (
     <section
       id="get-started-today"
-      className="relative overflow-hidden bg-slate-slate-50 pt-10 pb-16"
+      className="relative overflow-hidden pt-10 pb-16"
     >
       {/* <Image
         className="absolute left-1/2 top-1/2 max-w-none -translate-x-1/2 -translate-y-1/2"
@@ -20,7 +20,7 @@ export function CallToAction() {
       /> */}
       <Container className="relative">
         <div className="mx-auto max-w-lg text-center">
-          <h2 className="font-display text-3xl tracking-tight text-slate-900 sm:text-4xl">
+          <h2 className="font-display text-5xl tracking-tight text-slate-900 sm:text-5xl">
             Get started today
           </h2>
           {/* <p className="mt-4 text-lg tracking-tight text-slate-900">
