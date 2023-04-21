@@ -8,7 +8,7 @@ export function CallToAction() {
   return (
     <section
       id="get-started-today"
-      className="relative overflow-hidden bg-slate-slate-50 py-32"
+      className="relative overflow-hidden bg-slate-slate-50 py-10"
     >
       {/* <Image
         className="absolute left-1/2 top-1/2 max-w-none -translate-x-1/2 -translate-y-1/2"
@@ -23,9 +23,9 @@ export function CallToAction() {
           <h2 className="font-display text-3xl tracking-tight text-slate-900 sm:text-4xl">
             Get started today
           </h2>
-          <p className="mt-4 text-lg tracking-tight text-slate-900">
+          {/* <p className="mt-4 text-lg tracking-tight text-slate-900">
           Unleash the Full Potential of our supercharged OpenAI Playground
-          </p>
+          </p> */}
           <Button href="https://app.promptsandbox.io" color="blue" className=" mt-5">
             Start building now
           </Button>

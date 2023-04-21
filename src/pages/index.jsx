@@ -22,7 +22,7 @@ export default function Home() {
       <main>
         <Hero />
         <PrimaryFeatures />
-        {/* <SecondaryFeatures /> */}
+        <SecondaryFeatures />
         <CallToAction />
         <Faqs />
       </main>
