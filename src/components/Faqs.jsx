@@ -8,7 +8,7 @@ const faqs = [
     {
       question: 'What is Promptsandbox.io?',
       answer:
-        'Promptsandbox.io is an intuitive, web-based platform designed to help you build and refine AI chatbots and applications using a visual interface. With a diverse library of pre-built blocks, seamless OpenAI API integration, and real-time chat interface, it simplifies the AI development process for users of all skill levels.',
+        'Promptsandbox.io is an intuitive, web-based platform designed to help you build and refine AI chatbots and applications using a visual canvas. With a diverse library of pre-built blocks, seamless OpenAI API integration, and real-time chat interface, it simplifies the AI development process for users of all skill levels.',
     },
     {
       question: 'How does Promptsandbox.io work?',
@@ -22,9 +22,10 @@ const faqs = [
   ],
   [
     {
-      question: 'Do I need an OpenAI API key to use Promptsandbox.io?',
+      question:
+        'Is this like the Open AI Playground?',
       answer:
-        'Yes.',
+        'It pretty much is, but so much more. You can use Promptsandbox to quickly test out your ideas, but you can also build more complex workflows and even applications!',
     },
     {
       question:
@@ -33,10 +34,9 @@ const faqs = [
         'Currently, custom block creation is not supported. However, this feature may be added in the future.',
     },
     {
-      question:
-        'Is my data secure?',
+      question: 'Do I need an OpenAI API key to use Promptsandbox.io?',
       answer:
-        'Your data privacy and security are important to us. We employ industry-standard practices to protect your information and data while using the platform.',
+        'Yes.',
     },
   ],
   [
@@ -45,13 +45,15 @@ const faqs = [
       answer:'Yes, you can share your AI workflows by copying the URL of the workflow and sending it to them. They can then open the workflow in their browser and run it. You can also discover and remix workflows created by other users by checking out the gallery.',
     },
     {
-      question: 'How can I provide feedback or report issues?',
-      answer: 'We value user feedback and encourage you to reach out to us with any suggestions, questions, or issues. You can contact us via email at egan@hey.com',
+      question:
+        'Is my data secure?',
+      answer:
+        'Your data privacy and security are important to us. We employ industry-standard practices to protect your information and data while using the platform.',
     },
     {
       question: 'Is Promptsandbox.io suitable for beginners with little or no programming experience',
       answer:
-        'Absolutely! Our intuitive visual interface is designed to be accessible to users with varying levels of expertise, including those with little or no programming experience.',
+        'Absolutely! Our intuitive visual canvas is designed to be accessible to users with varying levels of expertise, including those with little or no programming experience.',
     },
   ],
 ]

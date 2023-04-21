@@ -11,7 +11,7 @@ import screenshotChat from '@/images/screenshots/chat.png'
 
 const features = [
   {
-    title: 'Intuitive Visual Interface',
+    title: 'Intuitive Visual Canvas',
     description:
       "Effortlessly create AI workflows with drag-and-drop blocks, suitable for both beginners and experts.",
     image: screenshotGeneral,
@@ -69,7 +69,7 @@ export function PrimaryFeatures() {
           Elevate Your AI Workflows without breaking a sweat
           </h2>
           <p className="mt-6 text-lg tracking-tight text-slate-100">
-            It&#39;s like the OpenAI Playground, but supercharged
+            It&#39;s like the Open AI Playground, but supercharged
           </p>
         </div>
         <Tab.Group
