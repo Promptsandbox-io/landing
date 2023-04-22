@@ -7,6 +7,7 @@ import { Header } from '@/components/Header'
 import { Hero } from '@/components/Hero'
 import { PrimaryFeatures } from '@/components/PrimaryFeatures'
 import { SecondaryFeatures } from '@/components/SecondaryFeatures'
+import { Container } from '@/components/Container'
 
 export default function Home() {
   return (
@@ -21,6 +22,9 @@ export default function Home() {
       <Header />
       <main>
         <Hero />
+        {/* <Container className="pb-5 pt-6 text-center lg:pt-6">
+          
+        </Container> */}
         <PrimaryFeatures />
         {/* <SecondaryFeatures /> */}
         <CallToAction />

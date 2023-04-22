@@ -1,12 +1,15 @@
-import Image from 'next/image'
 
 import { Button } from '@/components/Button'
 import { Container } from '@/components/Container'
+import Image from 'next/image'
+
+import screenshotChat from '@/images/screenshots/chat.png'
 
 export function Hero() {
   return (
-    <Container className="pb-16 pt-20 text-center lg:pt-32">
-      <h1 className="mx-auto max-w-4xl font-display text-5xl font-medium tracking-tight text-slate-900 sm:text-7xl">
+    <div className="'mx-auto px-4 sm:px-6 lg:px-8 pb-16 pt-20 text-center lg:pt-32 bg-gradient-to-b from-white to-blue-100">
+      <h1 className="mx-auto max-w-4xl font-display text-5xl font-semibold tracking-tight text-slate-900 sm:text-7xl">
+        {/* Build AI assistants with{" "} */}
         Build AI workflows with{" "}
         <span className="relative whitespace-nowrap text-blue-600">
           <svg
@@ -27,7 +30,7 @@ export function Hero() {
       <div className='flex flex-col gap-1'>
         <Button
           href="https://app.promptsandbox.io" 
-          color="blue"
+          color="slate"
         aria-label={`Get started`}
         >
         <span>
@@ -48,7 +51,26 @@ export function Hero() {
           <span className="ml-3">Watch video</span>
         </Button>
       </div>
-     
-    </Container>
+
+      <Container>
+      <div className="mt-16 flow-root sm:mt-24 bg-slate-50">
+        <div className="-m-2 rounded-xl bg-gray-900/5 p-2 ring-1 ring-inset ring-gray-900/10 lg:-m-4 lg:rounded-2xl lg:p-4">
+        <video 
+				controls
+          className="rounded-md shadow-2xl ring-1 ring-gray-900/10"
+        >
+          <source src="./hero-basic.webm" type="video/webm" />
+        </video>
+          {/* <Image
+            src={screenshotChat}
+            alt="App screenshot"
+            width={2432}
+            height={1442}
+            className="rounded-md shadow-2xl ring-1 ring-gray-900/10"
+          /> */}
+        </div>
+      </div>
+      </Container>
+    </div>
   )
 }
