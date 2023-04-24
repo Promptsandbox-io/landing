@@ -8,7 +8,7 @@ export function CallToAction() {
   return (
     <section
       id="get-started-today"
-      className="relative overflow-hidden pt-10 pb-16"
+      className="relative overflow-hidden pb-16 pt-10"
     >
       {/* <Image
         className="absolute left-1/2 top-1/2 max-w-none -translate-x-1/2 -translate-y-1/2"
@@ -20,13 +20,17 @@ export function CallToAction() {
       /> */}
       <Container className="relative">
         <div className="mx-auto max-w-lg text-center">
-          <h2 className="font-display text-5xl tracking-tight text-slate-900 sm:text-5xl">
+          <h2 className="font-display text-5xl font-semibold tracking-tight text-slate-900 sm:text-5xl">
             Get started today
           </h2>
           {/* <p className="mt-4 text-lg tracking-tight text-slate-900">
           Unleash the Full Potential of our supercharged OpenAI Playground
           </p> */}
-          <Button href="https://app.promptsandbox.io" color="blue" className=" mt-5">
+          <Button
+            href="https://app.promptsandbox.io"
+            color="blue"
+            className=" mt-5"
+          >
             Start building now
           </Button>
         </div>

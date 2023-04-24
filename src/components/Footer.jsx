@@ -6,10 +6,12 @@ import { NavLink } from '@/components/NavLink'
 
 export function Footer() {
   return (
-    <footer className="bg-slate-50">
+    <footer className="bg-blue-100">
       <Container>
         <div className="py-16">
-        <p className='font-bold text-lg text-slate-800 text-center w-auto'>Promptsandbox.io</p>
+          <p className="w-auto text-center text-lg font-bold text-slate-800">
+            Promptsandbox.io
+          </p>
         </div>
         <div className="flex flex-col items-center border-t border-slate-400/10 py-10 sm:flex-row-reverse sm:justify-between">
           <div className="flex gap-x-6">
@@ -27,8 +29,8 @@ export function Footer() {
             </Link>
           </div>
           <p className="mt-6 text-sm text-slate-500 sm:mt-0">
-            Copyright &copy; {new Date().getFullYear()} Promptsandbox. All rights
-            reserved.
+            Copyright &copy; {new Date().getFullYear()} Promptsandbox. All
+            rights reserved.
           </p>
         </div>
       </Container>

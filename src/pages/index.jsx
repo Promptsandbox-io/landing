@@ -8,6 +8,8 @@ import { Hero } from '@/components/Hero'
 import { PrimaryFeatures } from '@/components/PrimaryFeatures'
 import { SecondaryFeatures } from '@/components/SecondaryFeatures'
 import { Container } from '@/components/Container'
+import { DemoSteps } from '@/components/DemoSteps'
+import ProblemAgitation from '@/components/ProblemAgitation'
 
 export default function Home() {
   return (
@@ -16,15 +18,14 @@ export default function Home() {
         <title>Promptsandbox - Open AI Playground</title>
         <meta
           name="description"
-          content="Most bookkeeping software is accurate, but hard to use. We make the opposite trade-off, and hope you don’t get audited."
+          content="Promptsandbox: The ultimate Open AI Playground for GPT workflows, offering an intuitive chat GPT playground experience at an affordable price."
         />
       </Head>
       <Header />
       <main>
         <Hero />
-        {/* <Container className="pb-5 pt-6 text-center lg:pt-6">
-          
-        </Container> */}
+        <DemoSteps />
+        <ProblemAgitation />
         <PrimaryFeatures />
         {/* <SecondaryFeatures /> */}
         <CallToAction />
