@@ -122,6 +122,7 @@ export function DemoSteps() {
               <video
                 controls
                 preload="none"
+                playsInline
                 poster={selectedTab.videoPoster}
                 key={`${selectedTab.videoSource}.webm`}
                 width={videoWidth}
@@ -134,7 +135,7 @@ export function DemoSteps() {
                 />
                 <source
                   src={`${selectedTab.videoSource}.mp4`}
-                  type="video/webm"
+                  type="video/mp4"
                 />
               </video>
             ) : (
@@ -156,7 +157,7 @@ export function DemoSteps() {
                 />
                 <source
                   src={`${selectedTab.videoSource}.mp4`}
-                  type="video/webm"
+                  type="video/mp4"
                 />
               </video>
             )}
