@@ -6,7 +6,7 @@ import {
   ServerIcon,
 } from '@heroicons/react/20/solid'
 
-import screenshot from '@/images/screenshots/3d-screenshot.png'
+import screenshot from '@/images/screenshots/3d-screenshot.jpg'
 
 const features = [
   {
