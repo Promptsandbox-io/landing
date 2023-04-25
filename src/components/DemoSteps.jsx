@@ -5,22 +5,22 @@ import { Container } from '@/components/Container'
 const tabs = [
   {
     name: 'Step 1',
-    videoSource: './step1.webm',
+    videoSource: './step1',
     videoPoster: './step1-poster.png',
   },
   {
     name: 'Step 2',
-    videoSource: './step2.webm',
+    videoSource: './step2',
     videoPoster: './step2-poster.png',
   },
   {
     name: 'Step 3',
-    videoSource: './step3.webm',
+    videoSource: './step3',
     videoPoster: './step3-poster.png',
   },
   {
     name: 'The App',
-    videoSource: './the-app.webm',
+    videoSource: './the-app',
     videoPoster: './the-app-poster.png',
   },
 ]
@@ -55,9 +55,9 @@ export function DemoSteps() {
                 {tabs.map((tab) => (
                   <option key={tab.name} value={tab}>
                     {tab.name === 'Step 1' && '𝟭) Add Inputs'}
-                    {tab.name === 'Step 2' && '𝟮) Add Other Blocks'}
-                    {tab.name === 'Step 3' && '𝟯) Add Output'}
-                    {tab.name === 'The App' && '🚀 The App'}
+                    {tab.name === 'Step 2' && '𝟮) Incorporate Blocks'}
+                    {tab.name === 'Step 3' && '𝟯) Configure Results'}
+                    {tab.name === 'The App' && '🚀 AI App'}
                   </option>
                 ))}
               </select>
@@ -79,19 +79,22 @@ export function DemoSteps() {
                     }
                   >
                     {tab.name == 'Step 1' && (
-                      <p>
-                        <span className="font-extrabold text-blue-600">
-                          1{')'}
-                        </span>{' '}
-                        Add Inputs
-                      </p>
+                      <div className="flex gap-5">
+                        <p>
+                          <span className="font-extrabold text-blue-600">
+                            1{')'}
+                          </span>{' '}
+                          Add Inputs
+                        </p>
+                        <p>{'>'}</p>
+                      </div>
                     )}
                     {tab.name == 'Step 2' && (
                       <p>
                         <span className="font-extrabold text-blue-600">
                           2{')'}
                         </span>{' '}
-                        Add Other Blocks
+                        Incorporate Blocks
                       </p>
                     )}
                     {tab.name == 'Step 3' && (
@@ -99,11 +102,11 @@ export function DemoSteps() {
                         <span className="font-extrabold text-blue-600">
                           3{')'}
                         </span>{' '}
-                        Add Output
+                        Configure Results
                       </p>
                     )}
                     {tab.name == 'The App' && (
-                      <p className="font-extrabold text-blue-600">🚀 The App</p>
+                      <p className="font-extrabold text-blue-600">🚀 AI App</p>
                     )}
                   </button>
                 ))}
@@ -120,16 +123,23 @@ export function DemoSteps() {
                 controls
                 preload="none"
                 poster={selectedTab.videoPoster}
-                key={selectedTab.videoSource}
+                key={`${selectedTab.videoSource}.webm`}
                 width={videoWidth}
                 height={videoHeight}
                 className="lozad rounded-md shadow-2xl ring-1 ring-slate-900/10"
               >
-                <source src={selectedTab.videoSource} type="video/webm" />
+                <source
+                  src={`${selectedTab.videoSource}.webm`}
+                  type="video/webm"
+                />
+                <source
+                  src={`${selectedTab.videoSource}.mp4`}
+                  type="video/webm"
+                />
               </video>
             ) : (
               <video
-                key={selectedTab.videoSource}
+                key={`${selectedTab.videoSource}.webm`}
                 // controls
                 muted={true}
                 autoPlay
@@ -140,7 +150,14 @@ export function DemoSteps() {
                 height={videoHeight}
                 className="lozad rounded-m shadow-2xl ring-1 ring-slate-900/10"
               >
-                <source src={selectedTab.videoSource} type="video/webm" />
+                <source
+                  src={`${selectedTab.videoSource}.webm`}
+                  type="video/webm"
+                />
+                <source
+                  src={`${selectedTab.videoSource}.mp4`}
+                  type="video/webm"
+                />
               </video>
             )}
           </div>
