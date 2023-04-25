@@ -10,19 +10,18 @@ import screenshot from '@/images/screenshots/3d-screenshot.jpg'
 
 const features = [
   {
-    name: 'A cost-effective alternative to premium GPT AI apps.',
-    description: `Promptsandbox provides a cost-effective alternative to pricey GPT AI apps and playgrounds, simplifying tasks without sacrificing user experience.`,
+    name: 'Unlock cost-effective GPT AI solutions.',
+    description: `Experience the power of GPT AI without breaking the bank. Promptsandbox delivers exceptional value and user experience at a fraction of the cost.`,
     icon: CloudArrowUpIcon,
   },
   {
-    name: 'Streamline repetitive tasks with ease.',
-    description: `Eliminate the need for manual input of prompt sequences and let Promptsandbox handle your workflow, giving you more time to focus on critical tasks.`,
+    name: 'Maximize efficiency with task automation.',
+    description: `Save time and boost productivity by automating repetitive prompt sequences. Focus on what matters most while Promptsandbox manages your workflow.`,
     icon: LockClosedIcon,
   },
   {
-    name: 'Effortless prototyping and sharing of LLM apps.',
-    description: `Quickly design and share LLM app flows with
-      Promptsandbox, fostering faster development.`,
+    name: 'Rapidly prototype and share LLM apps.',
+    description: `Easily create, iterate, and share LLM app workflows with Promptsandbox. Accelerate your development process and bring your ideas to life.`,
     icon: ServerIcon,
   },
 ]
