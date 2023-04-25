@@ -24,9 +24,6 @@ const tabs = [
   },
 ]
 
-const videoWidth = '100%'
-const videoHeight = '280px'
-
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
@@ -139,7 +136,7 @@ export function DemoSteps() {
                         <span className="font-extrabold text-blue-600">
                           3{')'}
                         </span>{' '}
-                        Configure Results
+                        Add Outputs
                       </p>
                     )}
                     {tab.name == 'The App' && (
@@ -152,9 +149,9 @@ export function DemoSteps() {
           </div>
         </Container>
       </div>
-      <Container className={''}>
-        <div className=" mx-auto flow-root bg-slate-50 sm:mt-5 sm:pt-4">
-          <div className="-m-2 rounded-xl bg-slate-900/5 p-2 ring-1 ring-inset ring-slate-900/10 lg:-m-4 lg:rounded-2xl lg:p-4">
+      <div className="mx-auto inline-block px-4 sm:px-6 lg:px-8">
+        <div className="mx-auto inline-block bg-slate-50 sm:mt-5 sm:pt-4">
+          <div className="-m-2 inline-block rounded-xl bg-slate-900/5 p-2 ring-1 ring-inset ring-slate-900/10 lg:-m-4 lg:rounded-2xl lg:p-4">
             {selectedTab.name == 'The App' ? (
               <video
                 controls
@@ -163,9 +160,7 @@ export function DemoSteps() {
                 playsInline
                 poster={selectedTab.videoPoster}
                 key={`${selectedTab.videoSource}.webm`}
-                width={videoWidth}
-                height={videoHeight}
-                className="rounded-md shadow-2xl ring-1 ring-slate-900/10"
+                className=" mx-auto max-h-[40rem] rounded-md shadow-2xl ring-1 ring-slate-900/10"
               >
                 <source
                   src={`${selectedTab.videoSource}.webm`}
@@ -182,12 +177,11 @@ export function DemoSteps() {
                 // controls
                 muted={true}
                 autoPlay
+                loop
                 playsInline
                 preload="none"
                 poster={selectedTab.videoPoster}
-                width={videoWidth}
-                height={videoHeight}
-                className="lazy rounded-m shadow-2xl ring-1 ring-slate-900/10"
+                className="lazy rounded-m  mx-auto max-h-[40rem] shadow-2xl ring-1 ring-slate-900/10"
               >
                 <source
                   src={`${selectedTab.videoSource}.webm`}
@@ -201,7 +195,7 @@ export function DemoSteps() {
             )}
           </div>
         </div>
-      </Container>
+      </div>
     </div>
   )
 }
