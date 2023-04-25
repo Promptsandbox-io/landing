@@ -1,5 +1,4 @@
 import { useState, useRef, useEffect } from 'react'
-
 import { Container } from '@/components/Container'
 
 const tabs = [
@@ -32,36 +31,77 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
 
+function useLazyLoadVideos() {
+  const observerRef = useRef(null)
+
+  useEffect(() => {
+    const lazyVideos = [].slice.call(document.querySelectorAll('video.lazy'))
+
+    if ('IntersectionObserver' in window) {
+      observerRef.current = new IntersectionObserver((entries, observer) => {
+        entries.forEach((video) => {
+          if (video.isIntersecting) {
+            for (var source in video.target.children) {
+              var videoSource = video.target.children[source]
+              if (
+                typeof videoSource.tagName === 'string' &&
+                videoSource.tagName === 'SOURCE'
+              ) {
+                videoSource.src = videoSource.dataset.src
+              }
+            }
+
+            video.target.load()
+            video.target.classList.remove('lazy')
+            observer.unobserve(video.target)
+          }
+        })
+      })
+
+      lazyVideos.forEach((lazyVideo) => {
+        observerRef.current.observe(lazyVideo)
+      })
+
+      return () => {
+        if (observerRef.current) {
+          observerRef.current.disconnect()
+        }
+      }
+    }
+  }, [])
+
+  return observerRef
+}
+
 export function DemoSteps() {
   const [selectedTab, setSelectedTab] = useState(tabs[3])
+
+  const lazyLoadObserver = useLazyLoadVideos()
+
+  useEffect(() => {
+    const lazyLoadVar = lazyLoadObserver.current
+    return () => {
+      if (lazyLoadVar) {
+        lazyLoadVar.disconnect()
+      }
+    }
+  }, [lazyLoadObserver])
+
+  const handleVideoClick = async (event) => {
+    event.preventDefault()
+    // play or pause video
+    if (event.target.paused) {
+      event.target.play()
+    } else {
+      event.target.pause()
+    }
+  }
 
   return (
     <div className="mx-auto bg-gradient-to-b from-blue-50 to-blue-100 px-4 pb-16 text-center sm:px-6 lg:px-8 lg:pt-5">
       <div className="pt-2">
         <Container>
           <div className="flex justify-center">
-            <div className="sm:hidden">
-              <label htmlFor="tabs" className="sr-only">
-                Select a tab
-              </label>
-              {/* Use an "onChange" listener to redirect the user to the selected tab URL. */}
-              <select
-                id="tabs"
-                name="tabs"
-                className="block w-full rounded-md border-slate-300 focus:border-blue-500 focus:ring-blue-500"
-                defaultValue={tabs[0]}
-                onChange={(e) => setSelectedTab(e.target.value)}
-              >
-                {tabs.map((tab) => (
-                  <option key={tab.name} value={tab}>
-                    {tab.name === 'Step 1' && '𝟭) Add Inputs'}
-                    {tab.name === 'Step 2' && '𝟮) Incorporate Blocks'}
-                    {tab.name === 'Step 3' && '𝟯) Configure Results'}
-                    {tab.name === 'The App' && '🚀 AI App'}
-                  </option>
-                ))}
-              </select>
-            </div>
             <div className="hidden sm:block">
               <nav className="flex space-x-4" aria-label="Tabs">
                 {tabs.map((tab) => (
@@ -79,15 +119,12 @@ export function DemoSteps() {
                     }
                   >
                     {tab.name == 'Step 1' && (
-                      <div className="flex gap-5">
-                        <p>
-                          <span className="font-extrabold text-blue-600">
-                            1{')'}
-                          </span>{' '}
-                          Add Inputs
-                        </p>
-                        <p>{'>'}</p>
-                      </div>
+                      <p>
+                        <span className="font-extrabold text-blue-600">
+                          1{')'}
+                        </span>{' '}
+                        Add Inputs
+                      </p>
                     )}
                     {tab.name == 'Step 2' && (
                       <p>
@@ -121,20 +158,21 @@ export function DemoSteps() {
             {selectedTab.name == 'The App' ? (
               <video
                 controls
+                onClick={handleVideoClick}
                 preload="none"
                 playsInline
-                data-poster={selectedTab.videoPoster}
+                poster={selectedTab.videoPoster}
                 key={`${selectedTab.videoSource}.webm`}
                 width={videoWidth}
                 height={videoHeight}
-                className="lozad rounded-md shadow-2xl ring-1 ring-slate-900/10"
+                className="rounded-md shadow-2xl ring-1 ring-slate-900/10"
               >
                 <source
-                  data-src={`${selectedTab.videoSource}.webm`}
+                  src={`${selectedTab.videoSource}.webm`}
                   type="video/webm"
                 />
                 <source
-                  data-src={`${selectedTab.videoSource}.mp4`}
+                  src={`${selectedTab.videoSource}.mp4`}
                   type="video/mp4"
                 />
               </video>
@@ -146,17 +184,17 @@ export function DemoSteps() {
                 autoPlay
                 playsInline
                 preload="none"
-                data-poster={selectedTab.videoPoster}
+                poster={selectedTab.videoPoster}
                 width={videoWidth}
                 height={videoHeight}
-                className="lozad rounded-m shadow-2xl ring-1 ring-slate-900/10"
+                className="lazy rounded-m shadow-2xl ring-1 ring-slate-900/10"
               >
                 <source
-                  data-src={`${selectedTab.videoSource}.webm`}
+                  src={`${selectedTab.videoSource}.webm`}
                   type="video/webm"
                 />
                 <source
-                  data-src={`${selectedTab.videoSource}.mp4`}
+                  src={`${selectedTab.videoSource}.mp4`}
                   type="video/mp4"
                 />
               </video>
