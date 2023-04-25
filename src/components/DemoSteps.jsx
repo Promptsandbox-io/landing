@@ -1,5 +1,6 @@
 import { useState, useRef, useEffect } from 'react'
 import { Container } from '@/components/Container'
+import clsx from 'clsx'
 
 const CLOUDFRONT_URL =
   'https://promptsandbox-landing.s3.us-west-1.amazonaws.com'
@@ -155,67 +156,74 @@ export function DemoSteps() {
       <div className="mx-auto inline-block px-4 sm:px-6 lg:px-8">
         <div className="mx-auto inline-block bg-slate-50 sm:mt-5 sm:pt-4">
           <div className="-m-2 inline-block rounded-xl bg-slate-900/5 p-2 ring-1 ring-inset ring-slate-900/10 lg:-m-4 lg:rounded-2xl lg:p-4">
-            {selectedTab.name == 'The App' ? (
-              <>
+            {tabs.map((tab) => {
+              if (selectedTab.name === tab.name && tab.name === 'The App') {
+                return (
+                  <div key={tab.name}>
+                    <video
+                      controls
+                      onClick={handleVideoClick}
+                      preload="none"
+                      playsInline
+                      poster={`${CLOUDFRONT_URL}/${selectedTab.videoPoster}`}
+                      key={`${CLOUDFRONT_URL}/the-app-poster.webp`}
+                      className="mx-auto hidden h-[40rem] rounded-md shadow-2xl ring-1 ring-slate-900/10 sm:block"
+                    >
+                      <source
+                        src={`${CLOUDFRONT_URL}/${selectedTab.videoSource}.webm`}
+                        type="video/webm"
+                      />
+                      <source
+                        src={`${CLOUDFRONT_URL}/${selectedTab.videoSource}.mp4`}
+                        type="video/mp4"
+                      />
+                    </video>
+                    <video
+                      controls
+                      playsInline
+                      preload="none"
+                      poster={`${CLOUDFRONT_URL}/${selectedTab.videoPoster}`}
+                      key={`the-app-poster.webp2`}
+                      className="mx-auto h-[40rem] rounded-md shadow-2xl ring-1 ring-slate-900/10 sm:hidden"
+                    >
+                      <source
+                        src={`${CLOUDFRONT_URL}/${selectedTab.videoSource}.webm`}
+                        type="video/webm"
+                      />
+                      <source
+                        src={`${CLOUDFRONT_URL}/${selectedTab.videoSource}.mp4`}
+                        type="video/mp4"
+                      />
+                    </video>
+                  </div>
+                )
+              }
+
+              return (
                 <video
-                  controls
-                  onClick={handleVideoClick}
-                  preload="none"
-                  playsInline
+                  key={`${tab.name}`}
+                  // controls
+                  autoPlay={true}
+                  muted={true}
+                  loop={true}
+                  playsInline={true}
                   poster={`${CLOUDFRONT_URL}/${selectedTab.videoPoster}`}
-                  key={`${CLOUDFRONT_URL}/${selectedTab.videoSource}.webm`}
-                  className="mx-auto hidden h-[40rem] rounded-md shadow-2xl ring-1 ring-slate-900/10 sm:block"
+                  className={clsx(
+                    selectedTab.name !== tab.name && 'hidden',
+                    'lazy mx-auto h-[40rem] rounded-md shadow-2xl ring-1 ring-slate-900/10'
+                  )}
                 >
                   <source
-                    src={`${CLOUDFRONT_URL}/${selectedTab.videoSource}.webm`}
+                    data-src={`${CLOUDFRONT_URL}/${selectedTab.videoSource}.webm`}
                     type="video/webm"
                   />
                   <source
-                    src={`${CLOUDFRONT_URL}/${selectedTab.videoSource}.mp4`}
+                    data-src={`${CLOUDFRONT_URL}/${selectedTab.videoSource}.mp4`}
                     type="video/mp4"
                   />
                 </video>
-                <video
-                  controls
-                  onClick={handleVideoClick}
-                  playsInline
-                  preload="none"
-                  poster={`${CLOUDFRONT_URL}/${selectedTab.videoPoster}`}
-                  key={`${selectedTab.videoSource}.webm2`}
-                  className="mx-auto h-[40rem] rounded-md shadow-2xl ring-1 ring-slate-900/10 sm:hidden"
-                >
-                  <source
-                    src={`${CLOUDFRONT_URL}/${selectedTab.videoSource}.webm`}
-                    type="video/webm"
-                  />
-                  <source
-                    src={`${CLOUDFRONT_URL}/${selectedTab.videoSource}.mp4`}
-                    type="video/mp4"
-                  />
-                </video>
-              </>
-            ) : (
-              <video
-                key={`${CLOUDFRONT_URL}/${selectedTab.videoSource}.webm`}
-                // controls
-                muted={true}
-                autoPlay
-                loop
-                playsInline
-                preload="none"
-                poster={`${CLOUDFRONT_URL}/${selectedTab.videoPoster}`}
-                className="lazy mx-auto  h-[40rem] rounded-md shadow-2xl ring-1 ring-slate-900/10"
-              >
-                <source
-                  src={`${CLOUDFRONT_URL}/${selectedTab.videoSource}.webm`}
-                  type="video/webm"
-                />
-                <source
-                  src={`${CLOUDFRONT_URL}/${selectedTab.videoSource}.mp4`}
-                  type="video/mp4"
-                />
-              </video>
-            )}
+              )
+            })}
           </div>
         </div>
       </div>
