@@ -123,18 +123,18 @@ export function DemoSteps() {
                 controls
                 preload="none"
                 playsInline
-                poster={selectedTab.videoPoster}
+                data-poster={selectedTab.videoPoster}
                 key={`${selectedTab.videoSource}.webm`}
                 width={videoWidth}
                 height={videoHeight}
                 className="lozad rounded-md shadow-2xl ring-1 ring-slate-900/10"
               >
                 <source
-                  src={`${selectedTab.videoSource}.webm`}
+                  data-src={`${selectedTab.videoSource}.webm`}
                   type="video/webm"
                 />
                 <source
-                  src={`${selectedTab.videoSource}.mp4`}
+                  data-src={`${selectedTab.videoSource}.mp4`}
                   type="video/mp4"
                 />
               </video>
@@ -146,17 +146,17 @@ export function DemoSteps() {
                 autoPlay
                 playsInline
                 preload="none"
-                poster={selectedTab.videoPoster}
+                data-poster={selectedTab.videoPoster}
                 width={videoWidth}
                 height={videoHeight}
                 className="lozad rounded-m shadow-2xl ring-1 ring-slate-900/10"
               >
                 <source
-                  src={`${selectedTab.videoSource}.webm`}
+                  data-src={`${selectedTab.videoSource}.webm`}
                   type="video/webm"
                 />
                 <source
-                  src={`${selectedTab.videoSource}.mp4`}
+                  data-src={`${selectedTab.videoSource}.mp4`}
                   type="video/mp4"
                 />
               </video>
