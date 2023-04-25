@@ -10,21 +10,25 @@ const tabs = [
     name: 'Step 1',
     videoSource: 'step1',
     videoPoster: 'step1-poster.webp',
+    order: 1,
   },
   {
     name: 'Step 2',
     videoSource: 'step2',
     videoPoster: 'step2-poster.webp',
+    order: 2,
   },
   {
     name: 'Step 3',
     videoSource: 'step3',
     videoPoster: 'step3-poster.webp',
+    order: 3,
   },
   {
     name: 'The App',
     videoSource: 'the-app',
     videoPoster: 'the-app-poster.webp',
+    order: 0,
   },
 ]
 
@@ -88,11 +92,24 @@ export function DemoSteps() {
     }
   }, [lazyLoadObserver])
 
-  const handleVideoClick = async (event) => {
+  const loadVideo = (video) => {
+    for (const source of video.children) {
+      if (source.tagName === 'SOURCE') {
+        source.src = source.dataset.src
+      }
+    }
+    video.load()
+  }
+
+  const handleVideoClick = async (event, currentOrder) => {
     event.preventDefault()
     // play or pause video
     if (event.target.paused) {
       event.target.play()
+
+      const tab = tabs[0]
+      const video = document.querySelector(`video[data-tab-name="${tab.name}"]`)
+      loadVideo(video)
     } else {
       event.target.pause()
     }
@@ -108,7 +125,16 @@ export function DemoSteps() {
                 {tabs.map((tab) => (
                   <button
                     key={tab.name}
-                    onClick={() => setSelectedTab(tab)}
+                    onClick={() => {
+                      if (tab.order < 3) {
+                        const foo = tabs[tab.order + 1]
+                        const video = document.querySelector(
+                          `video[data-tab-name="${foo.name}"]`
+                        )
+                        loadVideo(video)
+                      }
+                      setSelectedTab(tab)
+                    }}
                     className={classNames(
                       tab.name == selectedTab.name
                         ? 'bg-gradient-to-br from-blue-500/40 to-blue-400/30 font-extrabold text-blue-700/80'
@@ -167,6 +193,7 @@ export function DemoSteps() {
                       playsInline
                       poster={`${CLOUDFRONT_URL}/${selectedTab.videoPoster}`}
                       key={`${CLOUDFRONT_URL}/the-app-poster.webp`}
+                      data-tab-name={tab.name}
                       className="mx-auto hidden h-[40rem] rounded-md shadow-2xl ring-1 ring-slate-900/10 sm:block"
                     >
                       <source
@@ -184,6 +211,7 @@ export function DemoSteps() {
                       preload="none"
                       poster={`${CLOUDFRONT_URL}/${selectedTab.videoPoster}`}
                       key={`the-app-poster.webp2`}
+                      data-tab-name={tab.name}
                       className="mx-auto h-[40rem] rounded-md shadow-2xl ring-1 ring-slate-900/10 sm:hidden"
                     >
                       <source
@@ -202,12 +230,13 @@ export function DemoSteps() {
               return (
                 <video
                   key={`${tab.name}`}
-                  // controls
+                  controls
                   autoPlay={true}
                   muted={true}
                   loop={true}
                   playsInline={true}
                   poster={`${CLOUDFRONT_URL}/${selectedTab.videoPoster}`}
+                  data-tab-name={tab.name}
                   className={clsx(
                     selectedTab.name !== tab.name && 'hidden',
                     'lazy mx-auto h-[40rem] rounded-md shadow-2xl ring-1 ring-slate-900/10'
