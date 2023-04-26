@@ -10,6 +10,7 @@ import { SecondaryFeatures } from '@/components/SecondaryFeatures'
 import { Container } from '@/components/Container'
 import { DemoSteps } from '@/components/DemoSteps'
 import ProblemAgitation from '@/components/ProblemAgitation'
+import Newsletter from '@/components/Newsletter'
 
 export default function Home() {
   return (
@@ -30,6 +31,7 @@ export default function Home() {
         {/* <SecondaryFeatures /> */}
         <CallToAction />
         <Faqs />
+        <Newsletter />
       </main>
       <Footer />
     </>
