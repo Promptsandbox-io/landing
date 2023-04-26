@@ -188,9 +188,7 @@ export function DemoSteps() {
                     <video
                       controls
                       onClick={handleVideoClick}
-                      preload="none"
                       playsInline
-                      poster={`./${selectedTab.videoPoster}`}
                       key={`${CLOUDFRONT_URL}/the-app-poster.webp`}
                       data-tab-name={tab.name}
                       className="mx-auto  h-[40rem] rounded-md shadow-2xl ring-1 ring-slate-900/10"
