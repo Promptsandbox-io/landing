@@ -179,7 +179,7 @@ export function DemoSteps() {
           </div>
         </Container>
       </div>
-      <div className="mx-auto inline-block px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto inline-block px-1 sm:px-6 lg:px-8">
         <div className="mx-auto inline-block bg-slate-50 sm:mt-5 sm:pt-4">
           <div className="-m-2 inline-block rounded-xl bg-slate-900/5 p-2 ring-1 ring-inset ring-slate-900/10 lg:-m-4 lg:rounded-2xl lg:p-4">
             {tabs.map((tab) => {
@@ -212,7 +212,7 @@ export function DemoSteps() {
                       poster={`${CLOUDFRONT_URL}/${selectedTab.videoPoster}`}
                       key={`the-app-poster.webp2`}
                       data-tab-name={tab.name}
-                      className="mx-auto h-[40rem] rounded-md shadow-2xl ring-1 ring-slate-900/10 sm:hidden"
+                      className="mx-auto rounded-md shadow-2xl ring-1 ring-slate-900/10 sm:hidden"
                     >
                       <source
                         src={`${CLOUDFRONT_URL}/${selectedTab.videoSource}.webm`}
