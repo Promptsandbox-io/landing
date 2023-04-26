@@ -2,8 +2,7 @@ import { useState, useRef, useEffect } from 'react'
 import { Container } from '@/components/Container'
 import clsx from 'clsx'
 
-const CLOUDFRONT_URL =
-  'https://promptsandbox-landing.s3.us-west-1.amazonaws.com'
+const CLOUDFRONT_URL = 'https://d7hr8xy52mtba.cloudfront.net'
 
 const tabs = [
   {
@@ -191,7 +190,7 @@ export function DemoSteps() {
                       onClick={handleVideoClick}
                       preload="none"
                       playsInline
-                      poster={`${CLOUDFRONT_URL}/${selectedTab.videoPoster}`}
+                      poster={`./${selectedTab.videoPoster}`}
                       key={`${CLOUDFRONT_URL}/the-app-poster.webp`}
                       data-tab-name={tab.name}
                       className="mx-auto hidden h-[40rem] rounded-md shadow-2xl ring-1 ring-slate-900/10 sm:block"
@@ -209,7 +208,7 @@ export function DemoSteps() {
                       controls
                       playsInline
                       preload="none"
-                      poster={`${CLOUDFRONT_URL}/${selectedTab.videoPoster}`}
+                      poster={`./${selectedTab.videoPoster}`}
                       key={`the-app-poster.webp2`}
                       data-tab-name={tab.name}
                       className="mx-auto rounded-md shadow-2xl ring-1 ring-slate-900/10 sm:hidden"
@@ -235,7 +234,7 @@ export function DemoSteps() {
                   muted={true}
                   loop={true}
                   playsInline={true}
-                  poster={`${CLOUDFRONT_URL}/${selectedTab.videoPoster}`}
+                  poster={`./${selectedTab.videoPoster}`}
                   data-tab-name={tab.name}
                   className={clsx(
                     selectedTab.name !== tab.name && 'hidden',
