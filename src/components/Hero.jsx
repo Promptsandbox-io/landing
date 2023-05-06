@@ -9,7 +9,7 @@ export function Hero() {
     <div className="'mx-auto bg-gradient-to-b from-white to-blue-50 px-4 pb-16 pt-20 text-center sm:px-6 lg:px-8 lg:pt-32">
       <h1 className="font-display mx-auto max-w-4xl text-5xl font-semibold tracking-tight text-slate-900 sm:text-7xl">
         {/* Build AI assistants with{" "} */}
-        Effortless AI Chatbots with{' '}
+        AI Chatbots in Minutes with{' '}
         <span className="relative whitespace-nowrap text-blue-600">
           <svg
             aria-hidden="true"
@@ -24,8 +24,9 @@ export function Hero() {
         Code
       </h1>
       <p className="mx-auto mt-6 max-w-2xl text-lg tracking-tight text-slate-700">
-        Drag, Drop, and Connect your way to powerful AI chatbots and apps in our
-        visual canvas. Absolutely free. No login required.
+        Swiftly create GPT-powered chatbots with our drag-and-drop editor.
+        Prototype LLM apps, automate workflows, and empower content creators,
+        marketers, and developers.
       </p>
       <div className="mt-10 flex justify-center gap-x-6">
         <div className="flex flex-col gap-1">
@@ -37,10 +38,7 @@ export function Hero() {
             <span>Try for Free Now</span>
           </Button>
         </div>
-        <Button
-          href="https://www.youtube.com/watch?v=CBPw7FXtaEU"
-          variant="outline"
-        >
+        <Button href="https://youtu.be/xhFZaufrCfY" variant="outline">
           <svg
             aria-hidden="true"
             className="h-3 w-3 flex-none fill-slate-600 group-active:fill-current"
