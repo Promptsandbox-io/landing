@@ -38,7 +38,11 @@ export function Hero() {
             <span>Try for Free Now</span>
           </Button>
         </div>
-        <Button href="https://youtu.be/xhFZaufrCfY" variant="outline">
+        <Button
+          target="_blank"
+          href="https://youtu.be/xhFZaufrCfY"
+          variant="outline"
+        >
           <svg
             aria-hidden="true"
             className="h-3 w-3 flex-none fill-slate-600 group-active:fill-current"
