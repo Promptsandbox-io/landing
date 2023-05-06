@@ -93,7 +93,7 @@ export function DemoSteps() {
                 playsInline
                 poster={`${CLOUDFRONT_URL}/output.webp`}
                 key={`${CLOUDFRONT_URL}/output.webp`}
-                className="mx-auto  h-[40rem] rounded-md shadow-2xl ring-1 ring-slate-900/10"
+                className="mx-auto w-[55vw] rounded-md shadow-2xl ring-1 ring-slate-900/10 "
               >
                 {/* <source
                         src={`${CLOUDFRONT_URL}/${selectedTab.videoSource}.webm`}

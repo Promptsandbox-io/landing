@@ -11,12 +11,12 @@ import screenshot from '@/images/screenshots/3d-screenshot.jpg'
 const features = [
   {
     name: 'Affordable Task Automation with AI.',
-    description: `I wanted to harness the power of AI to automate repetitive tasks without incurring high costs typically associated with AI solutions.`,
+    description: `Harness the power of AI to automate repetitive tasks without incurring high costs typically associated with AI solutions.`,
     icon: CloudArrowUpIcon,
   },
   {
     name: `Beyond OpenAI's Playground.`,
-    description: `Promptsandbox elevates the playground experience with added features like prompt chains, loops, and conditionals, enabling rapid prototyping and experimentation in Prompt Engineering.`,
+    description: `Elevated Open AI playground experience with added features like prompt chains, loops, and conditionals, enabling rapid prototyping and experimentation in Prompt Engineering.`,
     icon: LockClosedIcon,
   },
   {
