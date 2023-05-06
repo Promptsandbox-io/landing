@@ -1,6 +1,7 @@
 import { useState, useRef, useEffect } from 'react'
 import { Container } from '@/components/Container'
 import clsx from 'clsx'
+import StepsComponent from './StepsComponent'
 
 const CLOUDFRONT_URL = 'https://d7hr8xy52mtba.cloudfront.net'
 
@@ -52,6 +53,7 @@ function useLazyLoadVideos() {
 
 export function DemoSteps() {
   const lazyLoadObserver = useLazyLoadVideos()
+  const [step, setStep] = useState(0)
 
   useEffect(() => {
     const lazyLoadVar = lazyLoadObserver.current
@@ -82,25 +84,28 @@ export function DemoSteps() {
   }
 
   return (
-    <div className="mx-auto bg-gradient-to-b from-blue-50 to-blue-100 px-4 pb-16 text-center sm:px-6 lg:px-8 lg:pt-2">
-      <div className="mx-auto  hidden px-1 sm:inline-block sm:px-6 lg:px-8">
-        <div className="mx-auto inline-block bg-slate-50 sm:mt-5 sm:pt-4">
+    <div className="mx-auto bg-gradient-to-b from-blue-50 to-blue-100 px-4 pb-16 text-center sm:px-6 lg:px-8">
+      <div className="mx-auto inline-block px-1 sm:px-6 lg:px-8">
+        <StepsComponent step={step} setStep={setStep} />
+        <div className="mx-auto inline-block bg-slate-50 sm:mt-4">
           <div className="-m-2 inline-block rounded-xl bg-slate-900/5 p-2 ring-1 ring-inset ring-slate-900/10 lg:-m-4 lg:rounded-2xl lg:p-4">
-            <div>
+            <div className="">
               <video
                 controls
                 onClick={handleVideoClick}
                 playsInline
-                poster={`${CLOUDFRONT_URL}/output.webp`}
-                key={`${CLOUDFRONT_URL}/output.webp`}
-                className="mx-auto w-[55vw] rounded-md shadow-2xl ring-1 ring-slate-900/10 "
+                poster={`${CLOUDFRONT_URL}/${
+                  step === 0 ? 'output' : 'final-product-poster'
+                }.webp`}
+                key={`${CLOUDFRONT_URL}/${
+                  step === 0 ? 'output' : 'final-product'
+                }.webm`}
+                className="mx-auto rounded-md shadow-2xl ring-1 ring-slate-900/10 sm:w-[55vw]"
               >
-                {/* <source
-                        src={`${CLOUDFRONT_URL}/${selectedTab.videoSource}.webm`}
-                        type="video/webm"
-                      /> */}
                 <source
-                  src={`${CLOUDFRONT_URL}/compressed-landing-final.mp4`}
+                  src={`${CLOUDFRONT_URL}/${
+                    step === 0 ? 'compressed-landing-final' : 'final-product'
+                  }.mp4`}
                   type="video/mp4"
                 />
               </video>
