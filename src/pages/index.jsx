@@ -27,9 +27,9 @@ export default function Home() {
         <Hero />
         <DemoSteps />
         <PrimaryFeatures />
+        <CallToAction />
         <ProblemAgitation />
         {/* <SecondaryFeatures /> */}
-        <CallToAction />
         <Faqs />
         <Newsletter />
       </main>

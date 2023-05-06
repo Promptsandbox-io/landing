@@ -6,7 +6,7 @@ import screenshotChat from '@/images/screenshots/chat.png'
 
 export function Hero() {
   return (
-    <div className="'mx-auto bg-gradient-to-b from-white to-blue-50 px-4 pb-16 pt-20 text-center sm:px-6 lg:px-8 lg:pt-32">
+    <div className="'mx-auto bg-gradient-to-b from-white to-blue-50 px-4 pb-8 pt-20 text-center sm:px-6 lg:px-8 lg:pt-32">
       <h1 className="font-display mx-auto max-w-4xl text-5xl font-semibold tracking-tight text-slate-900 sm:text-7xl">
         {/* Build AI assistants with{" "} */}
         AI Chatbots in Minutes with{' '}
