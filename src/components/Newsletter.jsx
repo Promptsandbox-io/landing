@@ -32,7 +32,7 @@ export default function Newsletter() {
   }
 
   return (
-    <div className="bg-blue-100 py-16 sm:py-24 lg:py-32">
+    <div className="bg-gradient-to-b from-white to-blue-50 py-10 sm:py-10 lg:py-14">
       <div className="mx-auto grid max-w-7xl grid-cols-1 gap-10 px-6 lg:grid-cols-12 lg:gap-8 lg:px-8">
         <div className="max-w-xl text-3xl font-bold tracking-tight text-gray-900 sm:text-3xl lg:col-span-7">
           <h2 className="inline sm:block lg:inline xl:block">
