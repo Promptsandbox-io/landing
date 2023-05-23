@@ -80,6 +80,7 @@ function MobileNavigation() {
           >
             <MobileNavLink href="#features">Features</MobileNavLink>
             <MobileNavLink href="#faq">FAQ</MobileNavLink>
+            <MobileNavLink href="#pricing">Pricing</MobileNavLink>
             <MobileNavLink href="mailto:egan@hey.com">Contact</MobileNavLink>
             <MobileNavLink href="https://github.com/eg9y/promptsandbox.io">
               Github
@@ -114,13 +115,14 @@ export function Header() {
             <div className="hidden md:flex md:gap-x-6">
               <NavLink href="#features">Features</NavLink>
               <NavLink href="#faq">FAQ</NavLink>
-              <NavLink href="mailto:egan@hey.com">Contact</NavLink>
-              <NavLink href="https://github.com/eg9y/promptsandbox.io">
-                Github
-              </NavLink>
+              <NavLink href="#pricing">Pricing</NavLink>
             </div>
           </div>
           <div className="flex items-center gap-x-5 md:gap-x-8">
+            <NavLink href="mailto:egan@hey.com">Contact</NavLink>
+            <NavLink href="https://github.com/eg9y/promptsandbox.io">
+              Github
+            </NavLink>
             <Button
               href="https://app.chatbutler.io"
               color="blue"

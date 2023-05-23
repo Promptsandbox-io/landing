@@ -11,6 +11,7 @@ import { Container } from '@/components/Container'
 import { DemoSteps } from '@/components/DemoSteps'
 import ProblemAgitation from '@/components/ProblemAgitation'
 import Newsletter from '@/components/Newsletter'
+import { Pricing } from '@/components/Pricing'
 
 export default function Home() {
   return (
@@ -27,10 +28,10 @@ export default function Home() {
         <Hero />
         <DemoSteps />
         <PrimaryFeatures />
+        <Pricing />
         <CallToAction />
         <Newsletter />
         <Faqs />
-        {/* <SecondaryFeatures /> */}
       </main>
       <Footer />
     </>
