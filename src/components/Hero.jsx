@@ -7,9 +7,9 @@ import screenshotChat from '@/images/screenshots/chat.png'
 export function Hero() {
   return (
     <div className="'mx-auto bg-gradient-to-b from-white to-blue-50 px-4 pb-8 pt-20 text-center sm:px-6 lg:px-8 lg:pt-32">
-      <h1 className="font-display mx-auto max-w-4xl text-5xl font-semibold tracking-tight text-slate-900/90 sm:text-7xl">
+      <h1 className="font-display mx-auto w-2/3 max-w-4xl text-3xl font-semibold tracking-tight text-slate-900/90 sm:text-5xl">
         {/* Build AI assistants with{" "} */}
-        Custom AI Chatbot for Your Site with{' '}
+        Custom AI Chatbots for Your Site, with{' '}
         <span className="relative whitespace-nowrap text-blue-500">
           <svg
             aria-hidden="true"
@@ -23,8 +23,8 @@ export function Hero() {
         </span>{' '}
       </h1>
       <p className="mx-auto mt-6 max-w-2xl text-lg tracking-tight text-slate-700/90">
-        Effortlessly make LLM-powered chatbots with our drag-and-drop editor,
-        balancing ease-of-use and flexibility to suit your custom website needs.
+        Design dynamic chatbot interactions with our intuitive node-based
+        editor. Harness the power of AI without a single line of code.
       </p>
       <div className="mt-10 flex justify-center gap-x-6">
         <div className="flex flex-col gap-1">

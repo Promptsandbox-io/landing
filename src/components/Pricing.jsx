@@ -8,7 +8,7 @@ const tiers = [
     price: { monthly: '$0' },
     description: 'Everything necessary to get started.',
     features: [
-      '3 Chatbots',
+      '1 Chatbots',
       'Upload 1 document per Chatbot',
       // 'Publish 1 Chatbot with limit of 5 exchanges',
     ],
@@ -17,12 +17,12 @@ const tiers = [
   {
     name: 'Essential',
     id: 'tier-essential',
-    href: 'https://app.chatbutler.ai',
+    href: '#get-started-today',
     price: { monthly: '$20' },
     description: 'Everything in Basic, and more',
     features: [
-      '5 Chatbots',
-      'Upload 10 documents per Chatbot',
+      '3 Chatbots',
+      'Upload 15 documents per Chatbot',
       'Publish Chatbots to your site',
       'Analytics',
     ],

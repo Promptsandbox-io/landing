@@ -86,7 +86,7 @@ export function DemoSteps() {
   return (
     <div className="mx-auto bg-gradient-to-b from-blue-50 to-blue-100 px-4 pb-16 text-center sm:px-6 lg:px-8">
       <div className="mx-auto inline-block px-1 sm:px-6 lg:px-8">
-        <StepsComponent step={step} setStep={setStep} />
+        {/* <StepsComponent step={step} setStep={setStep} /> */}
         <div className="mx-auto inline-block bg-slate-50 sm:mt-4">
           <div className="-m-2 inline-block rounded-xl bg-slate-900/5 p-2 ring-1 ring-inset ring-slate-900/10 lg:-m-4 lg:rounded-2xl lg:p-4">
             <div className="">
@@ -94,18 +94,11 @@ export function DemoSteps() {
                 controls
                 onClick={handleVideoClick}
                 playsInline
-                poster={`/${step === 0 ? 'step1-create' : 'step2-edit'}.png`}
-                key={`${CLOUDFRONT_URL}/${
-                  step === 0 ? 'step1-create' : 'step2-edit'
-                }.png`}
+                poster={`/step2-edit.png`}
+                key={`${CLOUDFRONT_URL}/final.mp4`}
                 className="mx-auto rounded-md shadow-2xl ring-1 ring-slate-900/10 sm:w-[55vw]"
               >
-                <source
-                  src={`${CLOUDFRONT_URL}/${
-                    step === 0 ? 'step1-create' : 'step2-edit'
-                  }.mp4`}
-                  type="video/mp4"
-                />
+                <source src={`${CLOUDFRONT_URL}/final.mp4`} type="video/mp4" />
               </video>
             </div>
           </div>
