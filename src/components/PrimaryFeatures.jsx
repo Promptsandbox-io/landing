@@ -18,13 +18,13 @@ const features = [
   {
     title: '🧱 Extensive Block Library',
     description:
-      'Use many ready-made blocks for OpenAI tools, helper functions, and working with documents.',
+      'Use ready-made blocks for OpenAI tools, helper functions, and working with documents.',
     image: screenshotBlocktypes,
   },
   {
     title: '💬 Real-time Chat Interface',
     description:
-      'Speedily try out and improve your AI apps using an included chat feature.',
+      'Instantly test out and improve your AI apps using an included chat feature.',
     image: screenshotChat,
   },
 ]
@@ -51,23 +51,16 @@ export function PrimaryFeatures() {
     <section
       id="features"
       aria-label="Features for running your books"
-      className="relative overflow-hidden  bg-gradient-to-b from-blue-100 to-white pb-10 pt-20 sm:py-32"
+      className="to-amber relative  overflow-hidden bg-gradient-to-b from-blue-100 pb-10 pt-16 sm:pb-24 sm:pt-20"
     >
-      {/* <Image
-        className="absolute opacity-70 left-1/2 top-1/2 max-w-none translate-x-[-44%] translate-y-[-42%]"
-        src={backgroundImage}
-        alt=""
-        width={2245}
-        height={1636}
-        unoptimized
-      /> */}
       <Container className="relative">
         <div className="max-w-2xl md:mx-auto md:text-center xl:max-w-4xl">
           <h2 className="font-display text-3xl font-bold tracking-tight text-black/80 sm:text-4xl md:text-5xl">
-            Elevate Your AI Workflows without breaking a sweat
+            Transform Your Customer Experience with AI-Powered Chatbots
           </h2>
           <p className="mt-6 text-lg tracking-tight text-slate-900">
-            It&#39;s like the Open AI Playground, but supercharged
+            Effortlessly create, customize, and deploy chatbots to enhance your
+            website&#39;s user experience and boost customer satisfaction.
           </p>
         </div>
         <Tab.Group
@@ -85,23 +78,21 @@ export function PrimaryFeatures() {
                       className={clsx(
                         'group relative rounded-full px-4 py-1 lg:rounded-l-xl lg:rounded-r-none lg:p-6',
                         selectedIndex === featureIndex
-                          ? 'bg-blue-200 lg:bg-slate-400/10 lg:ring-1 lg:ring-inset lg:ring-slate-500/50'
-                          : 'hover:bg-slate-200/60 lg:hover:bg-slate-200/60'
+                          ? 'bg-blue-200 lg:bg-blue-400/20 lg:ring-1 lg:ring-inset lg:ring-slate-500/50'
+                          : 'hover:cursor-pointer hover:bg-slate-200/60 lg:hover:bg-blue-400/10'
                       )}
                     >
-                      <h3>
-                        <Tab
-                          className={clsx(
-                            'font-display cursor-pointer text-lg [&:not(:focus-visible)]:focus:outline-none',
-                            selectedIndex === featureIndex
-                              ? 'text-slate-600 lg:text-slate-800'
-                              : 'hover:text-900-800 text-slate-800 lg:text-slate-800'
-                          )}
-                        >
-                          <span className="absolute inset-0 rounded-full lg:rounded-l-xl lg:rounded-r-none" />
-                          {feature.title}
-                        </Tab>
-                      </h3>
+                      <Tab
+                        className={clsx(
+                          'font-display cursor-pointer text-lg [&:not(:focus-visible)]:focus:outline-none',
+                          selectedIndex === featureIndex
+                            ? 'text-slate-600 lg:text-slate-800'
+                            : 'hover:text-900-800 text-slate-800 lg:text-slate-800'
+                        )}
+                      >
+                        <span className="absolute inset-0 rounded-full lg:rounded-l-xl lg:rounded-r-none" />
+                        {feature.title}
+                      </Tab>
                       <p
                         className={clsx(
                           'mt-2 hidden text-sm lg:block',

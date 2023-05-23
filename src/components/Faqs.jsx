@@ -6,42 +6,41 @@ import backgroundImage from '@/images/background-faqs.jpg'
 const faqs = [
   [
     {
-      question: 'What is Promptsandbox.io?',
+      question: 'What is Chatbutler.ai?',
       answer:
-        'Promptsandbox.io is a user-friendly platform for creating and refining AI chatbots and applications. It comes with a variety of pre-built components, seamless integration with OpenAI APIs, and a real-time chat interface, making AI development more accessible for users at any skill level.',
+        'Chatbutler.ai is a user-friendly platform for creating and refining AI chatbots for your website. It comes with a variety of pre-built components, seamless integration with OpenAI APIs, and a realtime chat interface, allowing you to leverage AI without a line of code.',
     },
     {
-      question: 'How does Promptsandbox.io work?',
+      question: 'How does Chatbutler.ai work?',
       answer:
-        'Users construct AI workflows by dragging and dropping blocks onto a canvas, connecting them to form a logical sequence. Each block serves a specific function and can exchange data with others. While running the sequence, users can interact with the AI application through a real-time chat interface for testing and refining.',
+        'Create AI chatbots by dragging and dropping blocks onto a canvas, connecting them to form a logical sequence. Each block serves a specific function and can exchange data with others. While running the sequence, users can interact with the AI application through a realtime chat interface for testing and refining their chatbot flow. When you are ready to embed in your site, click on the publish button, and you will be provided a script tag to embed to your site.',
     },
     {
-      question: 'Is Promptsandbox.io free to use?',
-      answer:
-        "Yes! And you don't need to sign up or install any additional software to start building.",
+      question: 'Is Chatbutler.ai free to use?',
+      answer: 'Yes, Chatbutler has a free tier.',
     },
   ],
   [
     {
-      question: 'Is this like the Open AI Playground?',
+      question:
+        'What are the benefits of using Chatbutler over other chatbot platforms?',
       answer:
-        'It pretty much is, but so much more. You can use Promptsandbox to quickly test out your ideas, but you can also build more complex workflows and even applications!',
+        'Chatbutler provides a flexible drag-and-drop editor that enables customizing the flow and steps of your chatbot interactions as flexibly as possible without the need to write a single line of code. Chatbutler does not rely on the documents and URLs loaded to each chatbot to create a helpful chatbot that would aid users with relevant results. Yes, we support these, but also for you to customize your interactions with our visual editor.',
     },
     {
-      question: 'Can I create custom blocks?',
+      question: 'How easy is it to integrate Chatbutler.ai with my website?',
       answer:
-        'Currently, custom block creation is not supported. However, this feature may be added in the future.',
+        'Click publish to generate an HTML script of the chatbot widget. You can then copy-and-paste this script to your site. That’s it!',
     },
     {
-      question: 'Do I need an OpenAI API key to use Promptsandbox.io?',
+      question: 'Can I customize the appearance of my chatbot?',
+      answer: 'Currently, this is a work in progress.',
+    },
+  ],
+  [
+    {
+      question: 'Do I need an OpenAI API key to use Chatbutler.ai?',
       answer: 'Yes.',
-    },
-  ],
-  [
-    {
-      question: 'Can I share my AI workflows with others?',
-      answer:
-        'Yes, you can share your AI workflows by copying the URL of the workflow and sending it to them. They can then open the workflow in their browser and run it. You can also discover and remix workflows created by other users by checking out the gallery.',
     },
     {
       question: 'Is my data secure?',
@@ -50,7 +49,7 @@ const faqs = [
     },
     {
       question:
-        'Is Promptsandbox.io suitable for beginners with little or no programming experience',
+        'Is Chatbutler.ai suitable for users with little or no programming experience?',
       answer:
         'Absolutely! Our visual platform is designed to be accessible to users with varying levels of expertise, including those with little or no programming experience.',
     },

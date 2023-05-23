@@ -33,12 +33,12 @@ export default function Newsletter() {
 
   return (
     <div className="bg-gradient-to-b from-white to-blue-50 py-10 sm:py-10 lg:py-14">
-      <div className="mx-auto grid max-w-7xl grid-cols-1 gap-10 px-6 lg:grid-cols-12 lg:gap-8 lg:px-8">
+      <div className="mx-auto flex max-w-7xl justify-center gap-4 px-6 lg:grid-cols-12 lg:gap-8 lg:px-8">
         <div className="max-w-xl text-3xl font-bold tracking-tight text-gray-900 sm:text-3xl lg:col-span-7">
           <h2 className="inline sm:block lg:inline xl:block">
-            Want product news and updates?
+            Stay in the loop
           </h2>{' '}
-          <p className="inline sm:block lg:inline xl:block">
+          <p className="inline text-xl font-medium text-gray-800 sm:block lg:inline xl:block">
             Sign up for our newsletter.
           </p>
         </div>

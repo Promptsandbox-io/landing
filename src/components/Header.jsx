@@ -1,5 +1,6 @@
 import { Fragment } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import { Popover, Transition } from '@headlessui/react'
 import clsx from 'clsx'
 
@@ -79,6 +80,7 @@ function MobileNavigation() {
           >
             <MobileNavLink href="#features">Features</MobileNavLink>
             <MobileNavLink href="#faq">FAQ</MobileNavLink>
+            <MobileNavLink href="mailto:egan@hey.com">Contact</MobileNavLink>
             <MobileNavLink href="https://github.com/eg9y/promptsandbox.io">
               Github
             </MobileNavLink>
@@ -91,27 +93,47 @@ function MobileNavigation() {
 
 export function Header() {
   return (
-    <header className="py-10">
+    <header className="bg-white py-10">
       <Container>
         <nav className="relative z-50 flex justify-between">
           <div className="flex items-center md:gap-x-12">
             <Link href="#" aria-label="Home">
-              <p className="text-lg font-bold text-slate-800">
-                Promptsandbox.io
-              </p>
+              <div className="flex flex-shrink-0 items-center gap-2">
+                <Image
+                  className="block"
+                  width={48}
+                  height={48}
+                  src="/icon-navbar.png"
+                  alt="Your Company"
+                />
+                <p className="text-lg font-bold text-slate-800">
+                  Chatbutler.ai
+                </p>
+              </div>
             </Link>
             <div className="hidden md:flex md:gap-x-6">
               <NavLink href="#features">Features</NavLink>
               <NavLink href="#faq">FAQ</NavLink>
+              <NavLink href="mailto:egan@hey.com">Contact</NavLink>
               <NavLink href="https://github.com/eg9y/promptsandbox.io">
                 Github
               </NavLink>
-              {/* <NavLink href="#testimonials">Blog</NavLink> */}
             </div>
           </div>
           <div className="flex items-center gap-x-5 md:gap-x-8">
-            <Button href="https://app.promptsandbox.io" color="blue">
-              Open Sandbox
+            <Button
+              href="https://app.chatbutler.io"
+              color="blue"
+              className={'hidden lg:block'}
+            >
+              Try for Free Now
+            </Button>
+            <Button
+              href="https://app.chatbutler.io"
+              color="blue"
+              className={'block lg:hidden'}
+            >
+              Try Now
             </Button>
 
             <div className="-mr-1 md:hidden">

@@ -94,17 +94,15 @@ export function DemoSteps() {
                 controls
                 onClick={handleVideoClick}
                 playsInline
-                poster={`${CLOUDFRONT_URL}/${
-                  step === 0 ? 'output' : 'final-product-poster'
-                }.webp`}
+                poster={`/${step === 0 ? 'step1-create' : 'step2-edit'}.png`}
                 key={`${CLOUDFRONT_URL}/${
-                  step === 0 ? 'output' : 'final-product'
-                }.webm`}
+                  step === 0 ? 'step1-create' : 'step2-edit'
+                }.png`}
                 className="mx-auto rounded-md shadow-2xl ring-1 ring-slate-900/10 sm:w-[55vw]"
               >
                 <source
                   src={`${CLOUDFRONT_URL}/${
-                    step === 0 ? 'compressed-landing-final' : 'final-product'
+                    step === 0 ? 'step1-create' : 'step2-edit'
                   }.mp4`}
                   type="video/mp4"
                 />

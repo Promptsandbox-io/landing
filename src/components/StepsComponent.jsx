@@ -1,6 +1,7 @@
 const steps = [
-  { id: '1', name: 'Craft' },
-  { id: '2', name: 'Utilize' },
+  { id: '1', name: 'Create' },
+  { id: '2', name: 'Edit' },
+  { id: '3', name: 'Publish 🚀' },
 ]
 
 export default function StepsComponent({ step, setStep }) {

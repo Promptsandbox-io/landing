@@ -16,7 +16,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Promptsandbox - Open AI Playground</title>
+        <title>ChatButler</title>
         <meta
           name="description"
           content="Promptsandbox: The ultimate Open AI Playground for GPT workflows, offering an intuitive chat GPT playground experience at an affordable price."
@@ -28,7 +28,6 @@ export default function Home() {
         <DemoSteps />
         <PrimaryFeatures />
         <CallToAction />
-        <ProblemAgitation />
         <Newsletter />
         <Faqs />
         {/* <SecondaryFeatures /> */}

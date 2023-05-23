@@ -27,11 +27,11 @@ export function CallToAction() {
           Unleash the Full Potential of our supercharged OpenAI Playground
           </p> */}
           <Button
-            href="https://app.promptsandbox.io"
+            href="https://app.chatbutler.io"
             color="blue"
             className=" mt-5"
           >
-            Start building now
+            Create your Chatbot
           </Button>
         </div>
       </Container>
