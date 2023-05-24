@@ -119,10 +119,12 @@ export function Header() {
             </div>
           </div>
           <div className="flex items-center gap-x-5 md:gap-x-8">
-            <NavLink href="mailto:egan@hey.com">Contact</NavLink>
-            <NavLink href="https://github.com/eg9y/promptsandbox.io">
-              Github
-            </NavLink>
+            <div className="relative hidden md:block">
+              <NavLink href="mailto:egan@hey.com">Contact</NavLink>
+              <NavLink href="https://github.com/eg9y/promptsandbox.io">
+                Github
+              </NavLink>
+            </div>
             <Button
               href="https://app.chatbutler.io"
               color="blue"

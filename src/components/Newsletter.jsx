@@ -34,21 +34,19 @@ export default function Newsletter() {
   return (
     <div
       id="newsletter"
-      className="bg-gradient-to-b from-white to-blue-50 py-10 sm:py-10 lg:py-14"
+      className=" bg-gradient-to-b from-white to-blue-50 py-10 sm:py-10 lg:py-14"
     >
-      <div className="mx-auto flex max-w-7xl justify-center gap-4 px-6 lg:grid-cols-12 lg:gap-8 lg:px-8">
-        <div className="max-w-xl text-3xl font-bold tracking-tight text-gray-900 sm:text-3xl lg:col-span-7">
-          <h2 className="inline sm:block lg:inline xl:block">
-            Stay in the loop
-          </h2>{' '}
-          <p className="inline text-xl font-medium text-gray-800 sm:block lg:inline xl:block">
-            Sign up for our newsletter.
-          </p>
-        </div>
+      <div className="mx-auto flex max-w-7xl justify-center gap-4 px-6 lg:px-8">
         <form
-          className="w-full max-w-md lg:col-span-5 lg:pt-2"
+          className="flex w-full max-w-md flex-col gap-2 lg:pt-2"
           onSubmit={handleSubmit}
         >
+          <h2 className=" inline text-3xl font-bold tracking-tight text-gray-900  sm:block sm:text-3xl lg:inline xl:block">
+            Stay in the loop
+          </h2>{' '}
+          <p className=" text-xl font-medium text-gray-800 sm:block lg:inline xl:block">
+            Sign up for our newsletter.
+          </p>
           <div className="flex gap-x-4">
             <label htmlFor="email-address" className="sr-only">
               Email address
