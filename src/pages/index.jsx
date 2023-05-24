@@ -20,7 +20,7 @@ export default function Home() {
         <title>ChatButler</title>
         <meta
           name="description"
-          content="Promptsandbox: The ultimate Open AI Playground for GPT workflows, offering an intuitive chat GPT playground experience at an affordable price."
+          content="ChatButler: The ultimate Open AI Playground for GPT workflows, offering an intuitive chat GPT playground experience at an affordable price."
         />
       </Head>
       <Header />

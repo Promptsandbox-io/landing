@@ -27,7 +27,7 @@ export function CallToAction() {
           Unleash the Full Potential of our supercharged OpenAI Playground
           </p> */}
           <Button
-            href="https://app.chatbutler.io"
+            href="https://app.chatbutler.ai"
             color="blue"
             className=" mt-5"
           >

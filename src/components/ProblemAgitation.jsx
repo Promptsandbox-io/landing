@@ -21,7 +21,7 @@ const features = [
   },
   {
     name: 'Hassle-Free LLM Tool Development.',
-    description: `Build and test AI chatbots effortlessly—no dev environment setups or dependency installations. Promptsandbox removes barriers, letting creativity and innovation thrive.`,
+    description: `Build and test AI chatbots effortlessly—no dev environment setups or dependency installations. Chatbutler removes barriers, letting creativity and innovation thrive.`,
     icon: ServerIcon,
   },
 ]
@@ -34,7 +34,7 @@ export default function ProblemAgitation() {
           <div className="lg:ml-auto lg:pl-4 lg:pt-4">
             <div className="lg:max-w-lg">
               <p className="mt-2 text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
-                Why Promptsandbox.io?
+                Why Chatbutler.ai?
               </p>
               <dl className="mt-10 max-w-xl space-y-8 text-base leading-7 text-slate-600 lg:max-w-none">
                 {features.map((feature) => (

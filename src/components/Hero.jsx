@@ -29,7 +29,7 @@ export function Hero() {
       <div className="mt-10 flex justify-center gap-x-6">
         <div className="flex flex-col gap-1">
           <Button
-            href="https://app.chatbutler.io"
+            href="https://app.chatbutler.ai"
             color="slate"
             aria-label={`Get started`}
           >

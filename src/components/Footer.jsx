@@ -10,15 +10,15 @@ export function Footer() {
       <Container>
         <div className="py-16">
           <p className="w-auto text-center text-lg font-bold text-slate-900">
-            Promptsandbox.io
+            Chatbutler.ai
           </p>
         </div>
         <div className="flex flex-col items-center border-t border-slate-400/10 py-10 sm:flex-row-reverse sm:justify-between">
           <div className="flex gap-x-6">
             <Link
-              href="https://github.com/eg9y/promptsandbox.io"
+              href="https://github.com/eg9y/Chatbutler.ai"
               className="group"
-              aria-label="Promptsandbox on GitHub"
+              aria-label="ChatButler on GitHub"
             >
               <svg
                 aria-hidden="true"
@@ -29,8 +29,8 @@ export function Footer() {
             </Link>
           </div>
           <p className="mt-6 text-sm text-slate-700 sm:mt-0">
-            Copyright &copy; {new Date().getFullYear()} Promptsandbox. All
-            rights reserved.
+            Copyright &copy; {new Date().getFullYear()} ChatButler. All rights
+            reserved.
           </p>
         </div>
       </Container>

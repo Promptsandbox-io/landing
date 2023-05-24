@@ -82,7 +82,7 @@ function MobileNavigation() {
             <MobileNavLink href="#faq">FAQ</MobileNavLink>
             <MobileNavLink href="#pricing">Pricing</MobileNavLink>
             <MobileNavLink href="mailto:egan@hey.com">Contact</MobileNavLink>
-            <MobileNavLink href="https://github.com/eg9y/promptsandbox.io">
+            <MobileNavLink href="https://github.com/eg9y/Chatbutler.ai">
               Github
             </MobileNavLink>
           </Popover.Panel>
@@ -121,19 +121,19 @@ export function Header() {
           <div className="flex items-center gap-x-5 md:gap-x-8">
             <div className="relative hidden md:block">
               <NavLink href="mailto:egan@hey.com">Contact</NavLink>
-              <NavLink href="https://github.com/eg9y/promptsandbox.io">
+              <NavLink href="https://github.com/eg9y/Chatbutler.ai">
                 Github
               </NavLink>
             </div>
             <Button
-              href="https://app.chatbutler.io"
+              href="https://app.chatbutler.ai"
               color="blue"
               className={'hidden lg:block'}
             >
               Try for Free Now
             </Button>
             <Button
-              href="https://app.chatbutler.io"
+              href="https://app.chatbutler.ai"
               color="blue"
               className={'block lg:hidden'}
             >
